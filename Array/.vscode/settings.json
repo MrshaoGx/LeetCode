@@ -1,0 +1,12 @@
+{
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "files.associations": {
+        "ostream": "cpp",
+        "initializer_list": "cpp",
+        "cstddef": "cpp",
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "array": "cpp",
+        "utility": "cpp"
+    }
+}
