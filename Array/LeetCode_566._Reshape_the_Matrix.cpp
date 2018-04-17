@@ -37,13 +37,49 @@ There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix. So output the origi
 Note:
 The height and width of the given matrix is in range [1, 100].
 The given r and c are all positive.**/
+
+//考点：遍历一遍旧数组 取出来放到对应新数组中，如果新数组行满 就换行，处理好边界，直到新数组行结束
 vector<vector<int>> matrixReshape(vector<vector<int>> &nums, int r, int c)
 {
+    int h = nums.size();
+    int w = 0;
+    if (h > 0)
+        w = nums[0].size();
+    if (w * h != r * c)
+    {
+        return nums;
+    }
+    vector<vector<int>> res(r);
+    int i = 0, j = 0, o = 0, p = 0;
+    while (o < r)
+    {
+        while (p < c && i < h)
+        {
+            res[o].push_back(nums[i][j++]);
+            p++;
+            if (j >= w)
+            {
+                j = 0;
+                i++;
+            }
+        }
+        p=0;
+        o++;
+    }
+    return res;
 }
 int main()
 {
-    vector<int> nums = {1, 2, 3, 4, 5};
-    std::cout << res[0] << res[1] << std::endl;
+    vector<vector<int>> nums = {{1, 2}, {3, 4}};
+    nums = matrixReshape(nums, 4, 1);
+    for (int i = 0; i < nums.size(); i++)
+    {
+        for (int j = 0; j < nums[i].size(); j++)
+        {
+            cout << nums[i][j] << " ";
+        }
+        cout << endl;
+    }
     system("pause");
     return 0;
 }
