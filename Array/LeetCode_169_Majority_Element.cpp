@@ -5,10 +5,12 @@
 #include <unordered_map>
 using namespace std;
 /**
- * Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+ * Given an array of size n, 
+ * find the majority element. 
+ * The majority element is the element that appears more than ⌊ n/2 ⌋ times.
 
 You may assume that the array is non-empty and the majority element always exist in the array.*/
-//考点：数组元素遍历，数量最多的元素计数肯定大于0 
+//考点：数组元素遍历，数量最多的元素数量计数器等于0 
 int majorityElement(vector<int> &nums)
 {
 	int major=nums[0],count=1;

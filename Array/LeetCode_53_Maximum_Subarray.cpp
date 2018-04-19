@@ -18,9 +18,6 @@ int maxSubArray(vector<int>& nums) {
        subArrays[i]=nums[i] + (subArrays[i - 1] > 0 ? subArrays[i - 1] : 0);  //如果子串之和小于0 则丢弃子串，并从当前位置继续累计
        max=max>subArrays[i]?max:subArrays[i];
     }
-    for(int i=0;i<nums.size();i++){
-        cout<<subArrays[i]<<" ";
-    }
     return max;
 }
 int main(){
