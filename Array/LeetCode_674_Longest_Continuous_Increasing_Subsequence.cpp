@@ -18,6 +18,7 @@ Explanation: The longest continuous increasing subsequence is [2], its length is
 Note: Length of the array will not exceed 10,000.
  * 
  * */
+//考点：寻找最大升序序列的长度
 int findLengthOfLCIS(vector<int> &nums)
 {
     int n=nums.size();
