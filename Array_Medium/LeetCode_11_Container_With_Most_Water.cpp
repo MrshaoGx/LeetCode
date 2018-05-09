@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <vector>
+#include <unordered_map>
 using namespace std;
 /**
  * Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). 
@@ -9,7 +10,7 @@ using namespace std;
 
 Note: You may not slant the container and n is at least 2.
  * */
-//思路：
+//思路：双指针，首尾指针，
 int maxArea(vector<int> &height)
 {
     int water = 0;
