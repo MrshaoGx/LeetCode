@@ -29,6 +29,7 @@ The length and width of the given matrix are in the range of [1, 150].
 
  * */
 //没看懂这题啥意思，评论区抄了一份过来的  标个标记吧 ⭐⭐⭐
+// 2019-04-19 留：腐蚀和膨胀。。Manhattan距离。。原来如此
 vector<vector<int>> imageSmoother(vector<vector<int>> &M)
 {
     if (M.empty())
